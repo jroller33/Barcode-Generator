@@ -1,9 +1,27 @@
-.App {
-  text-align: center;
+body {
+  background-color: #924646;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.headerDiv {
+  background-color: black;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.header {
+  color: white;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -12,6 +30,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+/* .App {
+  text-align: center;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +58,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
