@@ -4,15 +4,25 @@ import './App.css';
 function App() {
   return (
     <div className='container'>
-      <div className='headerDiv'>
       
-      <div>
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className='headerDiv'>
+        <div>
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        <div className='h1Div'>
+          <h1 className='header'>ReactJS  Barcode Generator</h1>
+        </div>
       </div>
-      <div className='h1Div'>
-        <h1 className='header'>ReactJS  Barcode Generator</h1>
+
+      <div className='button1'>
+      <p>Button 1</p>
       </div>
+
+      <div className='button2'>
+        <p>Button 2</p>
       </div>
+
+
     </div>
   );
 }
