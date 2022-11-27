@@ -1,17 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
+const JsBarcode = require('jsbarcode');
+const { Canvas } = require("canvas");
 
+const canvas = new Canvas();
+const barcode = JsBarcode(canvas, "Hello");
+
+// have separate pages for backroom barcodes, UPCs, DPCIs etc linked on navbar
 
 function App() {
   return (
-    <Navbar bg="primary" variant="dark">
+    <Container>
+      <Navbar bg="primary" variant="dark">
         <Container>
           <div><img src={logo} className="App-logo" alt="logo" /></div>
           <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
@@ -23,13 +30,18 @@ function App() {
         </Container>
       </Navbar>
 
+      <Container>
+        {barcode}
+      </Container>
+
+    </Container>
   );
 }
 
 export default App;
 
 /* <div className='container'>
-      
+
 <div className='headerDiv'>
   <div>
     <img src={logo} className="App-logo" alt="logo" />
