@@ -1,38 +1,58 @@
+import React, { useState } from 'react';
+// import React, { useState } from 'react';
+
+// import Jumbotron from 'react-bootstrap/Jumbotron';
+// import Toast from 'react-bootstrap/Toast';
+// import Container from 'react-bootstrap/Container';
+// import Button from 'react-bootstrap/Button';
+// import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/Nav';
+
+
 import logo from './logo.svg';
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+
+
 
 const JsBarcode = require('jsbarcode');
 const { Canvas } = require("canvas");
 
-const canvas = new Canvas();
-const barcode = JsBarcode(canvas, "Hello");
 
 // have separate pages for backroom barcodes, UPCs, DPCIs etc linked on navbar
 
 function App() {
   return (
-    <Navbar bg="primary" variant="dark">
-    <Container>
+    <div className='container py-4'>
+      
       <div><img src={logo} className="App-logo" alt="logo" /></div>
-      <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
-      <Nav className="me-auto">
-        <Nav.Link href="#link1">link1</Nav.Link>
-        <Nav.Link href="#link2">link2</Nav.Link>
-        <Nav.Link href="#link3">link3</Nav.Link>
-      </Nav>
-    </Container>
-  </Navbar>
 
+      <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
+      
+      <div>
+        <svg className='barcode'></svg>
+      </div>
+
+    </div>
   );
 }
 
 export default App;
+
+/*  OLD HOMEPAGE    */
+// import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/Nav';
+
+/* <Navbar bg="primary" variant="dark">
+<Container>
+  <div><img src={logo} className="App-logo" alt="logo" /></div>
+  <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
+  <Nav className="me-auto">
+    <Nav.Link href="#link1">link1</Nav.Link>
+    <Nav.Link href="#link2">link2</Nav.Link>
+    <Nav.Link href="#link3">link3</Nav.Link>
+  </Nav>
+</Container>
+</Navbar> */
 
 // <Container>
 // <Navbar bg="primary" variant="dark">
