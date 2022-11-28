@@ -17,28 +17,43 @@ const barcode = JsBarcode(canvas, "Hello");
 
 function App() {
   return (
+    <Navbar bg="primary" variant="dark">
     <Container>
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <div><img src={logo} className="App-logo" alt="logo" /></div>
-          <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#link1">link1</Nav.Link>
-            <Nav.Link href="#link2">link2</Nav.Link>
-            <Nav.Link href="#link3">link3</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-      <Container>
-        {barcode}
-      </Container>
-
+      <div><img src={logo} className="App-logo" alt="logo" /></div>
+      <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
+      <Nav className="me-auto">
+        <Nav.Link href="#link1">link1</Nav.Link>
+        <Nav.Link href="#link2">link2</Nav.Link>
+        <Nav.Link href="#link3">link3</Nav.Link>
+      </Nav>
     </Container>
+  </Navbar>
+
   );
 }
 
 export default App;
+
+// <Container>
+// <Navbar bg="primary" variant="dark">
+//   <Container>
+//     <div><img src={logo} className="App-logo" alt="logo" /></div>
+//     <Navbar.Brand href="#navbar">ReactJS Barcode Generator</Navbar.Brand>
+//     <Nav className="me-auto">
+//       <Nav.Link href="#link1">link1</Nav.Link>
+//       <Nav.Link href="#link2">link2</Nav.Link>
+//       <Nav.Link href="#link3">link3</Nav.Link>
+//     </Nav>
+//   </Container>
+// </Navbar>
+
+// <Container>
+//   {barcode}
+// </Container>
+
+// </Container>
+
+
 
 /* <div className='container'>
 
