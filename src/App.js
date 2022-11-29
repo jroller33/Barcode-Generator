@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
-// import React, { useState } from 'react';
+import JsBarcode from 'jsbarcode';
+import logo from './logo.svg';
+import './App.css';
 
+var ReactDOM = require('react-dom');
+var Barcode = require('react-barcode');
+// import React, { useState } from 'react';
 // import Jumbotron from 'react-bootstrap/Jumbotron';
 // import Toast from 'react-bootstrap/Toast';
 // import Container from 'react-bootstrap/Container';
 // import Button from 'react-bootstrap/Button';
 // import Navbar from 'react-bootstrap/Navbar';
 // import Nav from 'react-bootstrap/Nav';
-
-
-import logo from './logo.svg';
-import './App.css';
-
-
-
 // const JsBarcode = require('jsbarcode');
 // const { Canvas } = require("canvas");
-
 
 // have separate pages for backroom barcodes, UPCs, DPCIs etc linked on navbar
 
 function App() {
+
   return (
     <div className='container py-4'>
       
@@ -29,7 +27,7 @@ function App() {
       <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
       
       <div>
-        <svg className='barcode'></svg>
+        <Barcode value="hello" />
       </div>
 
     </div>
