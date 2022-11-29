@@ -2,14 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { useBarcode } from 'react-barcode';
-
+import Barcode from 'react-barcode';
 
 function App() {
-  const inputRef = console.log(useBarcode({
-    value: 'hello'
-  }));
-
 
   return (
     <div className='container py-4'>
@@ -19,7 +14,7 @@ function App() {
       <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
       </div>
       <div>
-        <svg ref={inputRef} />
+        <Barcode value="hello" />
       </div>
 
     </div>
