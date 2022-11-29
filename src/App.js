@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,15 +6,29 @@ import Barcode from 'react-barcode';
 
 function App() {
 
+  // this updates the barcode with the text in the input field
+  const [message, setMessage] = useState('');
+
+  const handleChange = event => {
+    setMessage(event.target.value);
+  }
+
+
+
   return (
     <div className='container py-4'>
       <div>
-      <div><img src={logo} className="App-logo" alt="logo" /></div>
+        <div><img src={logo} className="App-logo" alt="logo" /></div>
 
-      <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
+        <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
+        <h2>🚧under development🚧</h2>
       </div>
+      <label>Barcode: </label>
+      <input type="text" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+
+
       <div>
-        <Barcode value="hello" />
+        <Barcode value={message} />
       </div>
 
     </div>
