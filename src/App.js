@@ -14,8 +14,8 @@ import './App.css';
 
 
 
-const JsBarcode = require('jsbarcode');
-const { Canvas } = require("canvas");
+// const JsBarcode = require('jsbarcode');
+// const { Canvas } = require("canvas");
 
 
 // have separate pages for backroom barcodes, UPCs, DPCIs etc linked on navbar
