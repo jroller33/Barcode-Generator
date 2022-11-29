@@ -16,18 +16,19 @@ function App() {
 
 
   return (
-    <div className='container py-4'>
-      <div>
-        <div><img src={logo} className="App-logo" alt="logo" /></div>
+    <div className='container py-4 h-100'>
 
-        <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
-        <h2>🚧under development🚧</h2>
+      <div className='headerDiv rounded py-4'>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className='rounded display-5 fw-bold shadow-sm'>ReactJS Barcode Generator</h1>
       </div>
-      <label>Barcode: </label>
-      <input type="text" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
 
+      <div className='inputDiv py-4'>
+        <h4>Type below to create a barcode: </h4>
+        <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+      </div>
 
-      <div>
+      <div className='barcodeDiv py-4'>
         <Barcode value={message} />
       </div>
 
@@ -36,6 +37,14 @@ function App() {
 }
 
 export default App;
+
+
+/* <div className='devDiv'>
+<h2>🚧under development🚧</h2>
+</div> */
+
+
+
 // import React, { useState } from 'react';
 // import Jumbotron from 'react-bootstrap/Jumbotron';
 // import Toast from 'react-bootstrap/Toast';
