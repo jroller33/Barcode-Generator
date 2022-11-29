@@ -21,11 +21,11 @@ function App() {
 
   return (
     <div className='container py-4'>
-      
+      <div>
       <div><img src={logo} className="App-logo" alt="logo" /></div>
 
       <h1 className='display-5 fw-bold'>ReactJS Barcode Generator</h1>
-      
+      </div>
       <div>
         <Barcode value="hello" />
       </div>
