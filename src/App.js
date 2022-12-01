@@ -14,30 +14,66 @@ function App() {
     setMessage(event.target.value);
   }
 
+  const [isOpen, setIsOpen] = useState(false);
+
 
 
   return (
-    <div className='container py-4 h-100'>
+    <div className='App' >
 
       <div className='headerDiv rounded py-4'>
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className='rounded display-5 fw-bold shadow-sm'>ReactJS Barcode Generator</h1>
       </div>
 
-      <div className='inputDiv py-4'>
-        <h4>Type below to create a barcode: </h4>
-        <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
-      </div>
+      <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen(true)} 
+        className='card'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
 
-      <div className='barcodeDiv py-4'>
-        <Barcode value={message} />
-      </div>
+        <motion.h2 layout="position">Create a barcode</motion.h2>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'
+            >
+            <p>Type or paste below to create a barcode:</p>
+            <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <div className='barcode'>
+            <Barcode value={message} />.
+            </div>
+          </motion.div>
+        )}
+      </motion.div>
 
     </div>
   );
 }
 
 export default App;
+
+
+/* <motion.div 
+transition={{ layout: { duration: 1, type: "spring" } }} 
+layout 
+onClick={() => setIsOpen(!isOpen)} 
+className='card'
+style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+>
+<div className='inputDiv py-4'>
+<motion.h4 layout="position">Type or paste below to create a barcode: </motion.h4>
+<input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+</div>
+
+<div className='barcodeDiv py-4'>
+<Barcode value={message} />
+</div>
+</motion.div> */
 
 
 /* <div className='devDiv'>
