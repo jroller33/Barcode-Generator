@@ -1,13 +1,7 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+I'm leaving this empty for now, bc all CSS is in App.css right now
+once this app is more complex, index.css will be needed.
+reference: https://stackoverflow.com/questions/44484907/index-css-vs-app-css-in-default-app-created-by-create-react-app-whats-the
+
+*/
