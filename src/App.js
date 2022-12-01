@@ -21,9 +21,9 @@ function App() {
   return (
     <div className='App' >
 
-      <div className='headerDiv rounded py-4'>
+      <div className='headerDiv'>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className='rounded display-5 fw-bold shadow-sm'>ReactJS Barcode Generator</h1>
+        <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
 
       <motion.div 
@@ -34,7 +34,7 @@ function App() {
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
 
-        <motion.h2 layout="position">Create a barcode</motion.h2>
+        <motion.h3 layout="position">Click Here</motion.h3>
         {isOpen && (
           <motion.div 
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
 
 
 /* <div className='devDiv'>
-<h2>🚧under development🚧</h2>
+<h3>🚧under development🚧</h3>
 </div> */
 
 
