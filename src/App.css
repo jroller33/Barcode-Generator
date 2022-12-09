@@ -5,12 +5,19 @@
 }
 
 html {
-  font-family: sans-serif;
+  background-image: linear-gradient(to bottom right, #5E5C5C, #9DC5C3);
 }
 
-body {
-  background-image: url(./background.jpg);
-}
+
+/* html {
+  font-family: sans-serif;
+  background: url(./redBlackBackground.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+} */
+
+/* body {
+} */
 
 .App {
   min-height: 100vh;
