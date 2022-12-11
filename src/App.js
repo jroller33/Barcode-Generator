@@ -9,12 +9,15 @@ function App() {
 
   // this updates the barcode with the text in the input field
   const [message, setMessage] = useState('');
-
   const handleChange = event => {
     setMessage(event.target.value);
   }
 
-  const [isOpen, setIsOpen] = useState(false);
+  
+  
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
 
 
 
@@ -26,16 +29,17 @@ function App() {
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
 
+
       <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
-        onClick={() => setIsOpen(true)} 
+        onClick={() => setIsOpen1(true)} 
         className='card'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
 
         <motion.h3 layout="position">Click Here</motion.h3>
-        {isOpen && (
+        {isOpen1 && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -50,6 +54,57 @@ function App() {
           </motion.div>
         )}
       </motion.div>
+
+      
+      <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen2(true)} 
+        className='card'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+
+        <motion.h3 layout="position">Click Here</motion.h3>
+        {isOpen2 && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'
+            >
+            <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <div className='barcode'>
+            <Barcode value={message} />.
+            </div>
+          </motion.div>
+        )}
+      </motion.div>
+
+
+      <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen3(true)} 
+        className='card'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+
+        <motion.h3 layout="position">Click Here</motion.h3>
+        {isOpen3 && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'
+            >
+            <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <div className='barcode'>
+            <Barcode value={message} />.
+            </div>
+          </motion.div>
+        )}
+      </motion.div>
+
 
     </div>
   );
