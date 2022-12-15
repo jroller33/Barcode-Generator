@@ -24,20 +24,22 @@ function App() {
   return (
     <div className='App' >
 
-      <div className='headerDiv'>
+
+      <div className='headerDiv bg-dark bg-gradient text-secondary'>
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
+
 
       <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
         onClick={() => setIsOpen1(true)} 
-        className='card'
+        className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
 
-        <motion.h3 layout="position">Click Here</motion.h3>
+        <motion.h3 className='.card-subtitle' layout="position">Click Here</motion.h3>
         {isOpen1 && (
           <motion.div 
             initial={{ opacity: 0 }}
@@ -45,8 +47,8 @@ function App() {
             transition={{ duration: 1 }}
             className='barcodeDiv'
             >
-            <p>Type or paste below to create a barcode:</p>
-            <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
             <div className='barcode'>
             <Barcode value={message} />.
             </div>
