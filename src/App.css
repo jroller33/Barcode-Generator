@@ -2,7 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
+#root {
+  background-image: linear-gradient(to bottom right, #b30a0a, #3a3131);
+}
+
 
 /* 
 html {
@@ -30,7 +36,8 @@ html {
 
 .headerDiv {
   display: flex;
-  background-color: rgb(252, 252, 252);
+  color: rgb(160, 165, 199);
+  background-color: rgb(20, 20, 20);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   margin: 2rem;

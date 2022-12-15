@@ -59,12 +59,13 @@ function App() {
       <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
-        onClick={() => setIsOpen2(true)} 
+        onClick={() => setIsOpen2(true)} K
         className='card'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
 
         <motion.h3 layout="position">Click Here</motion.h3>
+        
         {isOpen2 && (
           <motion.div 
             initial={{ opacity: 0 }}
