@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className='App' >
-      <div>
+      <div className='fitToScreen'>
 
 
       <div className='headerDiv bg-dark bg-gradient text-white'>
