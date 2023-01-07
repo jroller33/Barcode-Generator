@@ -13,32 +13,21 @@ function App() {
     setMessage(event.target.value);
   }
 
-  
   // removing state and motion
   // const [isOpen1, setIsOpen1] = useState(false);
-
-
-
-
 
   // const [isOpen2, setIsOpen2] = useState(false);
   // const [isOpen3, setIsOpen3] = useState(false);
 
-
-
   return (
     <div className='App' >
       <div className='fitToScreen'>
-
 
       <div className='headerDiv bg-dark bg-gradient text-white'>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
-
-
-
 
       <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
@@ -76,9 +65,6 @@ function App() {
       
 
       </div>
-
-
-
 
 {/* 
       <motion.div 
@@ -107,9 +93,6 @@ function App() {
       </motion.div> */}
 
       
-      
-
-
     </div>
   );
 }
