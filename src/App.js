@@ -34,8 +34,8 @@ function App() {
       <div className='fitToScreen'>
 
       <div className='headerDiv bg-dark bg-gradient text-white'>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className='rounded display-5 fw-bold'>Type or Paste Below:</h1>
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
@@ -52,7 +52,7 @@ function App() {
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange1} value={message1} />
 
             <div className='barcode'>
-            <Barcode value={message1} />.
+            <Barcode value={message1} />
             </div>
 
         </div>
@@ -71,7 +71,7 @@ function App() {
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange2} value={message2} />
 
             <div className='barcode'>
-            <Barcode value={message2} />.
+            <Barcode value={message2} />
             </div>
 
         </div>
@@ -88,7 +88,7 @@ function App() {
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange3} value={message3} />
 
             <div className='barcode'>
-            <Barcode value={message3} />.
+            <Barcode value={message3} />
             </div>
 
         </div>
