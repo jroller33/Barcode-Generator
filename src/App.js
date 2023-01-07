@@ -18,6 +18,11 @@ function App() {
     setMessage2(event.target.value);
   }
 
+  const [message3, setMessage3] = useState('');
+  const handleChange3 = event => {
+    setMessage3(event.target.value);
+  }
+
   // removing state and motion
   // const [isOpen1, setIsOpen1] = useState(false);
 
@@ -67,6 +72,23 @@ function App() {
 
             <div className='barcode'>
             <Barcode value={message2} />.
+            </div>
+
+        </div>
+
+      </div>
+
+      <div className='card bg-dark bg-gradient text-white'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+        <div className='barcodeDiv'
+            >
+            {/* <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4> */}
+
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange3} value={message3} />
+
+            <div className='barcode'>
+            <Barcode value={message3} />.
             </div>
 
         </div>
