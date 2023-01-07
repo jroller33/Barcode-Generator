@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Barcode from 'react-barcode';
@@ -28,13 +28,13 @@ function App() {
 
   return (
     <div className='App' >
+      <div>
 
 
-      <div className='headerDiv bg-dark bg-gradient text-secondary'>
+      <div className='headerDiv bg-dark bg-gradient text-white'>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
-
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
 
@@ -43,18 +43,37 @@ function App() {
       <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-        Hello
+        <div className='barcodeDiv'
+            >
+            <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
+
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+
+            <div className='barcode'>
+            <Barcode value={message} />.
+            </div>
+
+        </div>
+
       </div>
-      
-      <div className='card bg-dark bg-gradient text-secondary'
+
+      <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
+        <div className='barcodeDiv'
+            >
+            <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
+
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+
+            <div className='barcode'>
+            <Barcode value={message} />.
+            </div>
+
+        </div>
 
       </div>
       
-      <div className='card bg-dark bg-gradient text-secondary'
-        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
-        >        
 
       </div>
 

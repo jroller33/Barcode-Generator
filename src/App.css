@@ -18,7 +18,7 @@
   background-size: cover;
 } */
 .App {
-  min-height: 100vh;
+  /* max-height: 100vh; */
 
   display: flex;
   flex-direction: column;
@@ -29,8 +29,8 @@
   display: flex;
   color: rgb(160, 165, 199);
   background-color: rgb(20, 20, 20);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
+  /* padding: 0.5rem 1rem;
+  border-radius: 2rem; */
   margin: 2rem;
   box-shadow: 0px 10px 30px rgba(0,0,0, 0.5);
 }
@@ -46,9 +46,13 @@
 
 .card p {
   padding-top: 1rem;
-  line-height: 150%;
+  /* line-height: 150%; */
 }
 
+
+
+/* *** THIS IS FOR THE REACT LOGO */
+/* 
 .App-logo {
   height: 10vmin;
   pointer-events: none;
@@ -65,7 +69,8 @@
   to {
     transform: rotate(360deg);
   }
-}
+}   ****** */
+
 
 /* justify-content: space-between; */
 
