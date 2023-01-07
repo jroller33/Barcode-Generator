@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 import Barcode from 'react-barcode';
@@ -8,9 +8,14 @@ import Barcode from 'react-barcode';
 function App() {
 
   // this updates the barcode with the text in the input field
-  const [message, setMessage] = useState('');
-  const handleChange = event => {
-    setMessage(event.target.value);
+  const [message1, setMessage1] = useState('');
+  const handleChange1 = event => {
+    setMessage1(event.target.value);
+  }
+
+  const [message2, setMessage2] = useState('');
+  const handleChange2 = event => {
+    setMessage2(event.target.value);
   }
 
   // removing state and motion
@@ -29,34 +34,39 @@ function App() {
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
+
+
+
       <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
         <div className='barcodeDiv'
             >
-            <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
+            {/* <h4 className='.card-subtitle'></h4> */}
 
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange1} value={message1} />
 
             <div className='barcode'>
-            <Barcode value={message} />.
+            <Barcode value={message1} />.
             </div>
 
         </div>
 
       </div>
 
+
+
       <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
         <div className='barcodeDiv'
             >
-            <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
+            {/* <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4> */}
 
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange2} value={message2} />
 
             <div className='barcode'>
-            <Barcode value={message} />.
+            <Barcode value={message2} />.
             </div>
 
         </div>
@@ -84,9 +94,9 @@ function App() {
             className='barcodeDiv'
             >
             <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4>
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message1} />
             <div className='barcode'>
-            <Barcode value={message} />.
+            <Barcode value={message1} />.
             </div>
           </motion.div>
         )}
@@ -119,9 +129,9 @@ export default App;
 //             transition={{ duration: 1 }}
 //             className='barcodeDiv'
 //             >
-//             <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+//             <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message1} />
 //             <div className='barcode'>
-//             <Barcode value={message} />.
+//             <Barcode value={message1} />.
 //             </div>
 //           </motion.div>
 //         )}
@@ -144,9 +154,9 @@ export default App;
 //             transition={{ duration: 1 }}
 //             className='barcodeDiv'
 //             >
-//             <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+//             <input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message1} />
 //             <div className='barcode'>
-//             <Barcode value={message} />.
+//             <Barcode value={message1} />.
 //             </div>
 //           </motion.div>
 //         )}
@@ -166,11 +176,11 @@ style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
 >
 <div className='inputDiv py-4'>
 <motion.h4 layout="position">Type or paste below to create a barcode: </motion.h4>
-<input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message} />
+<input type="text" className="border border-primary shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange} value={message1} />
 </div>
 
 <div className='barcodeDiv py-4'>
-<Barcode value={message} />
+<Barcode value={message1} />
 </div>
 </motion.div> */
 
