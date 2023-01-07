@@ -30,7 +30,7 @@ function App() {
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
 
-
+{/* 
       <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
@@ -54,7 +54,7 @@ function App() {
             </div>
           </motion.div>
         )}
-      </motion.div>
+      </motion.div> */}
 
       
       
