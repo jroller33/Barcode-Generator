@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,8 +14,13 @@ function App() {
   }
 
   
-  
-  const [isOpen1, setIsOpen1] = useState(false);
+  // removing state and motion
+  // const [isOpen1, setIsOpen1] = useState(false);
+
+
+
+
+
   // const [isOpen2, setIsOpen2] = useState(false);
   // const [isOpen3, setIsOpen3] = useState(false);
 
@@ -26,9 +31,35 @@ function App() {
 
 
       <div className='headerDiv bg-dark bg-gradient text-secondary'>
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1>
       </div>
+
+      {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
+
+
+
+
+      <div className='card bg-dark bg-gradient text-white'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+        Hello
+      </div>
+      
+      <div className='card bg-dark bg-gradient text-secondary'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+
+      </div>
+      
+      <div className='card bg-dark bg-gradient text-secondary'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >        
+
+      </div>
+
+
+
 
 {/* 
       <motion.div 
