@@ -1,6 +1,30 @@
-# Barcode Generator
+# ReactJS Barcode Generator
+[![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-## 🚧 under development 🚧
+
+## Description
+
+### 🚧 under development 🚧
+
+## Table of Contents
+- [Usage](#usage)
+- [Deployed Link](#deployed-link)
+- [License](#license)
+- [Contact](#contact)
+
+
+## Usage
+
+
+
+## Deployed Link
+https://jroller33.github.io/Barcode-Generator/
+
+## License
+This project is licensed under the [GPL-3.0 License](./LICENSE).
+
+## Contact
+[GitHub](https://github.com/jroller33)
 
 
 <!-- # Getting Started with Create React App
