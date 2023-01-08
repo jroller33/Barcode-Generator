@@ -9,8 +9,10 @@
 }
 #root {
   background-image: linear-gradient(to bottom left, #b30a0a, #3a3131);
+  min-height: 100vh;
+  min-width: 100vw;
+  /* min-height and min-width make the background gradient fill the entire viewport */  
 }
-
 .App {
   /* max-height: 100vh; */
 
@@ -19,10 +21,10 @@
   align-items: center;
 }
 
-.fitToScreen {
+/* .fitToScreen {
   height: auto;
   width: auto;
-}
+} */
 
 .headerDiv {
   display: flex;

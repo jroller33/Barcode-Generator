@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 import Barcode from 'react-barcode';
@@ -12,29 +12,28 @@ function App() {
   const handleChange1 = event => {
     setMessage1(event.target.value);
   }
-
   const [message2, setMessage2] = useState('');
   const handleChange2 = event => {
     setMessage2(event.target.value);
   }
-
   const [message3, setMessage3] = useState('');
   const handleChange3 = event => {
     setMessage3(event.target.value);
   }
+
 
   // isOpen is for motion
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
 
+
   return (
     <div className='App' >
-      <div className='fitToScreen'>
 
       <div className='headerDiv bg-dark bg-gradient text-white'>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h1 className='rounded display-5 fw-bold'>Type or paste below:</h1>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className='rounded display-5 fw-bold'>Barcodes</h1>
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
@@ -58,51 +57,67 @@ function App() {
             >
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange1} value={message1} />
             <div className='barcode'>
-            <Barcode value={message1} />.
+            <Barcode value={message1} />
             </div>
           </motion.div>
-        )}
-
-
-
-
+      )}
     </motion.div>
 
-      <div className='card bg-dark bg-gradient text-white'
+
+
+
+    <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen2(true)} 
+        className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-        <div className='barcodeDiv'
+
+      <motion.div className='.card-subtitle'
+      layout="position"></motion.div>
+      {isOpen2 && (
+        <motion.div
+        initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'  
             >
-
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange2} value={message2} />
-
             <div className='barcode'>
             <Barcode value={message2} />
             </div>
+          </motion.div>
+      )}
+    </motion.div>
 
-        </div>
 
-      </div>
 
-      <div className='card bg-dark bg-gradient text-white'
+
+    <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen3(true)} 
+        className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-        <div className='barcodeDiv'
+
+      <motion.div className='.card-subtitle'
+      layout="position"></motion.div>
+      {isOpen3 && (
+        <motion.div
+        initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'  
             >
-            {/* <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4> */}
-
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange3} value={message3} />
-
             <div className='barcode'>
             <Barcode value={message3} />
             </div>
-
-        </div>
-
-      </div>
-      
-
-      </div>
+          </motion.div>
+      )}
+    </motion.div>
 
 {/* 
       <motion.div 
