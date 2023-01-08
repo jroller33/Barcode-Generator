@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -23,11 +23,10 @@ function App() {
     setMessage3(event.target.value);
   }
 
-  // removing animation
-  // const [isOpen1, setIsOpen1] = useState(false);
-
-  // const [isOpen2, setIsOpen2] = useState(false);
-  // const [isOpen3, setIsOpen3] = useState(false);
+  // isOpen is for motion
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
 
   return (
     <div className='App' >
@@ -40,33 +39,40 @@ function App() {
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
 
-
-
-      <div className='card bg-dark bg-gradient text-white'
+    <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen1(true)} 
+        className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-        <div className='barcodeDiv'
-            >
-            {/* <h4 className='.card-subtitle'></h4> */}
 
+      <motion.div className='.card-subtitle'
+      layout="position"></motion.div>
+      {isOpen1 && (
+        <motion.div
+        initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'  
+            >
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange1} value={message1} />
-
             <div className='barcode'>
-            <Barcode value={message1} />
+            <Barcode value={message1} />.
             </div>
-
-        </div>
-
-      </div>
+          </motion.div>
+        )}
 
 
+
+
+    </motion.div>
 
       <div className='card bg-dark bg-gradient text-white'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
         <div className='barcodeDiv'
             >
-            {/* <h4 className='.card-subtitle'>Type or paste below to create a barcode:</h4> */}
 
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange2} value={message2} />
 
