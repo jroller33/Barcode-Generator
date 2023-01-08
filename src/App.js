@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Barcode from 'react-barcode';
 import logo from './logo.svg';
 import './App.css';
 
-import Barcode from 'react-barcode';
+// TO DO:
+// create a CSS breakpoint, so on desktop the cards can be laid out differently than a column. (a column is needed for mobile)
+// have an options menu to be able to quickly select different kinds of barcodes
+// change the type of keyboard for mobile (media query?)
+
 
 function App() {
 
