@@ -7,12 +7,20 @@ import './App.css';
 // TO DO:
 // create a CSS breakpoint, so on desktop the cards can be laid out differently than a column. (a column is needed for mobile)
 // have an options menu to be able to quickly select different kinds of barcodes
-// change the type of keyboard for mobile (media query?)
+// change the type of keyboard on mobile for numerical barcodes (media query?)
+
+const showClickText = () => {
+  const [showClick1, setShowClick1] = React.useState(true)
+  const onClick1 = () => setShowClick1(false)
+  return(
+    <motion.h3 className='.card-subtitle' layout="position">Click Here</motion.h3>
+  )
+}
 
 
 function App() {
 
-  // this updates the barcode with the text in the input field
+  // this updates the barcode with the text in the input fields
   const [message1, setMessage1] = useState('');
   const handleChange1 = event => {
     setMessage1(event.target.value);
@@ -27,7 +35,7 @@ function App() {
   }
 
 
-  // isOpen is for motion
+  // isOpen is for motion on cards
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
