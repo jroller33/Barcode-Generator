@@ -1,4 +1,4 @@
-# ReactJS Barcode Generator
+# React.js Barcode Generator
 [![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
