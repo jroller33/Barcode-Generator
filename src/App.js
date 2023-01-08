@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Barcode from 'react-barcode';
@@ -34,8 +34,8 @@ function App() {
       <div className='fitToScreen'>
 
       <div className='headerDiv bg-dark bg-gradient text-white'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className='rounded display-5 fw-bold'>Type or Paste Below:</h1>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1 className='rounded display-5 fw-bold'>Type or paste below:</h1>
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
