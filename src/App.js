@@ -9,17 +9,19 @@ import './App.css';
 // have an options menu to be able to quickly select different kinds of barcodes
 // change the type of keyboard on mobile for numerical barcodes (media query?)
 
-const showClickText = () => {
-  const [showClick1, setShowClick1] = React.useState(true)
-  const onClick1 = () => setShowClick1(false)
+const HideClickText1 = () => {
+  const [hideClick1, setHideClick1] = React.useState(false)
+  const onClick1 = () => setHideClick1(true)
   return(
     <motion.h3 className='.card-subtitle' layout="position">Click Here</motion.h3>
   )
 }
-
+// isOpen is for motion on cards
+const [isOpen1, setIsOpen1] = useState(false);
+const [isOpen2, setIsOpen2] = useState(false);
+const [isOpen3, setIsOpen3] = useState(false);
 
 function App() {
-
   // this updates the barcode with the text in the input fields
   const [message1, setMessage1] = useState('');
   const handleChange1 = event => {
@@ -33,12 +35,6 @@ function App() {
   const handleChange3 = event => {
     setMessage3(event.target.value);
   }
-
-
-  // isOpen is for motion on cards
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
 
 
   return (
