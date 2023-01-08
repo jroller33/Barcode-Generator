@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React Barcodes",
+  "name": "React Barcode Generator",
   "icons": [
     {
       "src": "favicon.ico",
