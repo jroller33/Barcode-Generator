@@ -23,7 +23,7 @@ function App() {
     setMessage3(event.target.value);
   }
 
-  // removing state and motion
+  // removing animation
   // const [isOpen1, setIsOpen1] = useState(false);
 
   // const [isOpen2, setIsOpen2] = useState(false);

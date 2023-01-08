@@ -72,11 +72,12 @@
 }
 
 
-/* html {
+html {
   font-family: sans-serif;
-  background: url(./redBlackBackground.jpg) no-repeat center center fixed;
-  background-size: cover;
-} */
+  /* background: url(./redBlackBackground.jpg) no-repeat center center fixed;
+  background-size: cover; */
+}
+ 
 
 /* justify-content: space-between; */
 
