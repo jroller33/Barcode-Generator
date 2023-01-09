@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 :root {
   --card-bg: rgb(20, 20, 20);
@@ -15,16 +14,10 @@
 }
 .App {
   /* max-height: 100vh; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* .fitToScreen {
-  height: auto;
-  width: auto;
-} */
 
 .headerDiv {
   display: flex;
@@ -33,24 +26,12 @@
   margin: 1vh 10vw;
 }
 
-/* this is the old, rounded header
-.headerDiv {
-  display: flex;
-  color: rgb(160, 165, 199);
-  background-color: rgb(20, 20, 20);
-  padding: 1vh 2vw;
-  border-radius: 2rem;
-  margin: 1vh 20vw 2vh;
-  box-shadow: 0px 10px 30px rgba(0,0,0, 0.5);
-} */
-
 .card {
   background: var(--card-bg);
   background-color:rgb(20, 20, 20);
   background-image: var(--card-bg);
   padding: 10px;
   margin: 2vh 20vw 1vh;
-
 }
 
 .card p {
@@ -81,7 +62,22 @@
 }
 
 
- 
+/* this is the old, rounded header
+.headerDiv {
+  display: flex;
+  color: rgb(160, 165, 199);
+  background-color: rgb(20, 20, 20);
+  padding: 1vh 2vw;
+  border-radius: 2rem;
+  margin: 1vh 20vw 2vh;
+  box-shadow: 0px 10px 30px rgba(0,0,0, 0.5);
+} */
+
+
+/* .fitToScreen {
+  height: auto;
+  width: auto;
+} */
 
 /* justify-content: space-between; */
 
