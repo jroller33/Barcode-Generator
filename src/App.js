@@ -21,6 +21,7 @@ import './App.css';
 function App() {
 
   // this updates the barcode with the text in the input fields
+  // these need to move somewhere else, maybe a component
   const [message1, setMessage1] = useState('');
   const handleChange1 = event => {
     setMessage1(event.target.value);
@@ -33,24 +34,36 @@ function App() {
   const handleChange3 = event => {
     setMessage3(event.target.value);
   }
+  const [message4, setMessage4] = useState('');
+  const handleChange4 = event => {
+    setMessage4(event.target.value);
+  }
+  const [message5, setMessage5] = useState('');
+  const handleChange5 = event => {
+    setMessage5(event.target.value);
+  }
 
-
-  // isOpen is for motion on cards
+  // isOpen is for motion on cards, State needs to be pulled up to a parent component
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
 
 
   return (
     <div className='App' >
 
-      <div className='headerDiv bg-dark bg-gradient text-white'>
+      <div className='headerDiv text-white'>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className='rounded display-5 fw-bold'>Barcodes</h1>
+        {/* <h1 className='rounded display-5 fw-bold'>Barcodes</h1> */}
+
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
 
+    {/* there needs to be a component for these cards: */}
+    {/* CARD 1 */}
     <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
@@ -58,7 +71,6 @@ function App() {
         className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-
       <motion.div className='.card-subtitle'
       layout="position"></motion.div>
       {isOpen1 && (
@@ -77,8 +89,7 @@ function App() {
     </motion.div>
 
 
-
-
+    {/* CARD 2 */}
     <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
@@ -86,7 +97,6 @@ function App() {
         className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-
       <motion.div className='.card-subtitle'
       layout="position"></motion.div>
       {isOpen2 && (
@@ -105,8 +115,7 @@ function App() {
     </motion.div>
 
 
-
-
+    {/* CARD 3 */}
     <motion.div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
@@ -114,7 +123,6 @@ function App() {
         className='card bg-dark bg-gradient text-secondary'
         style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-
       <motion.div className='.card-subtitle'
       layout="position"></motion.div>
       {isOpen3 && (
@@ -127,6 +135,58 @@ function App() {
             <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange3} value={message3} />
             <div className='barcode'>
             <Barcode value={message3} />
+            </div>
+          </motion.div>
+      )}
+    </motion.div>
+
+
+    {/* CARD 4 */}
+    <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen4(true)} 
+        className='card bg-dark bg-gradient text-secondary'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+      <motion.div className='.card-subtitle'
+      layout="position"></motion.div>
+      {isOpen4 && (
+        <motion.div
+        initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'  
+            >
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange4} value={message4} />
+            <div className='barcode'>
+            <Barcode value={message4} />
+            </div>
+          </motion.div>
+      )}
+    </motion.div>
+
+
+    {/* CARD 5 */}
+    <motion.div 
+        transition={{ layout: { duration: 1, type: "spring" } }} 
+        layout 
+        onClick={() => setIsOpen5(true)} 
+        className='card bg-dark bg-gradient text-secondary'
+        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        >
+      <motion.div className='.card-subtitle'
+      layout="position"></motion.div>
+      {isOpen5 && (
+        <motion.div
+        initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='barcodeDiv'  
+            >
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange5} value={message5} />
+            <div className='barcode'>
+            <Barcode value={message5} />
             </div>
           </motion.div>
       )}
