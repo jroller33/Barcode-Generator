@@ -29,10 +29,11 @@
 .headerDiv {
   display: flex;
   color: rgb(160, 165, 199);
-  background-color: rgb(20, 20, 20);
   padding: 1vh 2vw;
   margin: 1vh 20vw 2vh;
-  box-shadow: 0px 10px 30px rgba(0,0,0, 0.5);
+}
+.headerText {
+  line-height: 50%;
 }
 /* this is the old, rounded header
 .headerDiv {

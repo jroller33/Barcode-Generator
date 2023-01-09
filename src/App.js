@@ -53,10 +53,10 @@ function App() {
 
   return (
     <div className='App' >
-
-      <div className='headerDiv text-white'>
+      {/* d-flex justify-content-center align-items-center keeps h1 text centered */}
+      <div className='headerDiv d-flex justify-content-center align-items-center'>
         <img src={logo} className="App-logo" alt="logo" />
-        {/* <h1 className='rounded display-5 fw-bold'>Barcodes</h1> */}
+        <h1 className='headerText display-5 fw-bold'>Barcodes</h1>
 
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
