@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Barcode from 'react-barcode';
-import logo from './logo.svg';
+import React from 'react';
+import Card from './components/Card'
+
 import './App.css';
 
 // TO DO:
@@ -23,29 +22,29 @@ function App() {
 
   // this updates the barcode with the text in the input fields
   // these need to move somewhere else, maybe a component
-  const [message1, setMessage1] = useState('');
-  const handleChange1 = event => {
-    setMessage1(event.target.value);
-  }
-  const [message2, setMessage2] = useState('');
-  const handleChange2 = event => {
-    setMessage2(event.target.value);
-  }
-  const [message3, setMessage3] = useState('');
-  const handleChange3 = event => {
-    setMessage3(event.target.value);
-  }
-  const [message4, setMessage4] = useState('');
-  const handleChange4 = event => {
-    setMessage4(event.target.value);
-  }
+  // const [message1, setMessage1] = useState('');
+  // const handleChange1 = event => {
+  //   setMessage1(event.target.value);
+  // }
+  // const [message2, setMessage2] = useState('');
+  // const handleChange2 = event => {
+  //   setMessage2(event.target.value);
+  // }
+  // const [message3, setMessage3] = useState('');
+  // const handleChange3 = event => {
+  //   setMessage3(event.target.value);
+  // }
+  // const [message4, setMessage4] = useState('');
+  // const handleChange4 = event => {
+  //   setMessage4(event.target.value);
+  // }
 
 
-  // isOpen is for motion on cards, State needs to be pulled up to a parent component
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
+  // // isOpen is for motion on cards, State needs to be pulled up to a parent component
+  // const [isOpen1, setIsOpen1] = useState(false);
+  // const [isOpen2, setIsOpen2] = useState(false);
+  // const [isOpen3, setIsOpen3] = useState(false);
+  // const [isOpen4, setIsOpen4] = useState(false);
 
 
   return (
@@ -58,111 +57,11 @@ function App() {
       </div>
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
-
-    {/* there needs to be a component for these cards: */}
-    {/* CARD 1 */}
-    <motion.div 
-        transition={{ layout: { duration: 1, type: "spring" } }} 
-        layout 
-        onClick={() => setIsOpen1(true)} 
-        className='card bg-dark bg-gradient text-secondary'
-        style={{ borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
-        >
-      <motion.div className='.card-subtitle'
-      layout="position"></motion.div>
-      {isOpen1 && (
-        <motion.div
-        initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='barcodeDiv'  
-            >
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={ handleChange1 } value={ message1 } />
-            <div className='barcode'>
-            <Barcode value={ message1 } />
-            </div>
-          </motion.div>
-      )}
-    </motion.div>
-
-
-    {/* CARD 2 */}
-    <motion.div 
-        transition={{ layout: { duration: 1, type: "spring" } }} 
-        layout 
-        onClick={() => setIsOpen2(true)} 
-        className='card bg-dark bg-gradient text-secondary'
-        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
-        >
-      <motion.div className='.card-subtitle'
-      layout="position"></motion.div>
-      {isOpen2 && (
-        <motion.div
-        initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='barcodeDiv'  
-            >
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange2} value={message2} />
-            <div className='barcode'>
-            <Barcode value={message2} />
-            </div>
-          </motion.div>
-      )}
-    </motion.div>
-
-
-    {/* CARD 3 */}
-    <motion.div 
-        transition={{ layout: { duration: 1, type: "spring" } }} 
-        layout 
-        onClick={() => setIsOpen3(true)} 
-        className='card bg-dark bg-gradient text-secondary'
-        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
-        >
-      <motion.div className='.card-subtitle'
-      layout="position"></motion.div>
-      {isOpen3 && (
-        <motion.div
-        initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='barcodeDiv'  
-            >
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange3} value={message3} />
-            <div className='barcode'>
-            <Barcode value={message3} />
-            </div>
-          </motion.div>
-      )}
-    </motion.div>
-
-    
-    {/* CARD 4 */}
-    <motion.div 
-        transition={{ layout: { duration: 1, type: "spring" } }} 
-        layout 
-        onClick={() => setIsOpen4(true)} 
-        className='card bg-dark bg-gradient text-secondary'
-        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
-        >
-      <motion.div className='.card-subtitle'
-      layout="position"></motion.div>
-      {isOpen4 && (
-        <motion.div
-        initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='barcodeDiv'  
-            >
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange4} value={message4} />
-            <div className='barcode'>
-            <Barcode value={message4} />
-            </div>
-          </motion.div>
-      )}
-    </motion.div>
-
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    {/* transitions aren't as smooth(animation) when split into components */}
 
 {/* 
       <motion.div 
