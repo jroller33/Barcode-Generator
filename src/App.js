@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 // TO DO:
+// make separate components and move State up
 // create a CSS breakpoint, so on desktop the cards can be laid out differently than a column. (a column is needed for mobile)
 // have an options menu to be able to quickly select different kinds of barcodes
 // change the type of keyboard on mobile for numerical barcodes (media query?)
@@ -51,7 +52,7 @@ function App() {
     <div className='App' >
       {/* d-flex justify-content-center align-items-center keeps h1 text centered */}
       <div className='headerDiv d-flex justify-content-center align-items-center text-white'>
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className='headerText display-5 fw-bold'>Click Below ⬇️</h1>
 
       </div>
@@ -65,7 +66,7 @@ function App() {
         layout 
         onClick={() => setIsOpen1(true)} 
         className='card bg-dark bg-gradient text-secondary'
-        style={{borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
+        style={{ borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
       <motion.div className='.card-subtitle'
       layout="position"></motion.div>
@@ -76,9 +77,9 @@ function App() {
             transition={{ duration: 1 }}
             className='barcodeDiv'  
             >
-            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={handleChange1} value={message1} />
+            <input type="text" className="border border-danger shadow-lg form-control" id="barcodeInput" name="barcodeInput" onChange={ handleChange1 } value={ message1 } />
             <div className='barcode'>
-            <Barcode value={message1} />
+            <Barcode value={ message1 } />
             </div>
           </motion.div>
       )}
