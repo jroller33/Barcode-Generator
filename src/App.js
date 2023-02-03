@@ -14,11 +14,16 @@ function App() {
 
   return (
     <div className='App' >
+      
       {/* d-flex justify-content-center align-items-center keeps h1 text centered */}
-      <div className='headerDiv d-flex justify-content-center align-items-center text-white'>
-        <h1 className='headerText display-5 fw-bold'>Type Below ⬇️</h1>
 
-      </div>
+
+      {/* <div className='headerDiv d-flex justify-content-center align-items-center text-white'>
+        <h1 className='headerText display-5 fw-bold'>Start Typing Below ⬇️</h1>
+
+      </div> */}
+
+
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
       <Card />
