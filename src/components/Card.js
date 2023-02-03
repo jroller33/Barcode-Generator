@@ -13,7 +13,6 @@ function Card() {
     }
 
 
-
     return (
 
         <motion.div 
