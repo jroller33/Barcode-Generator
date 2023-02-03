@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='App' >
-      
+
       {/* d-flex justify-content-center align-items-center keeps h1 text centered */}
 
 
@@ -26,6 +26,7 @@ function App() {
 
       {/* <h1 className='rounded display-5 fw-bold'>Barcode Generator</h1> */}
 
+      <Card />
       <Card />
       <Card />
       <Card />
