@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Barcode from 'react-barcode';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
+// i'm leaving framer-motion installed in npm, bc I might use it later
+
 import '../App.css';
 
 function Card() {
@@ -15,17 +17,17 @@ function Card() {
 
     return (
 
-        <motion.div 
+        <div 
         transition={{ layout: { duration: 1, type: "spring" } }} 
         layout 
         onClick={() => setIsOpen(true)} 
         className='card bg-dark bg-gradient text-secondary'
         style={{ borderRadius: "2rem", boxShadow: '0px 10px 30px rgba(0,0,0, 0.5)' }}
         >
-      <motion.div className='.card-subtitle'
-      layout="position"></motion.div>
+      <div className='.card-subtitle'
+      layout="position"></div>
       {isOpen && (
-        <motion.div
+        <div
         initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -36,9 +38,9 @@ function Card() {
             <div className='barcode'>
             <Barcode value={ message } />
             </div>
-          </motion.div>
+          </div>
       )}
-    </motion.div>
+    </div>
 
 
     )
