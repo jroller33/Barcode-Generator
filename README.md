@@ -5,6 +5,8 @@
 ## Description
 
 ### 🚧 under development 🚧
+The version of this app that's deployed at the link below is the last working version before I started rebuilding the app. The currently deployed version is basically a minimum viable product. I'm going to use Flask and Python to build a backend for this app, and then deploy it to Azure.
+
 
 ## Table of Contents
 - [Usage](#usage)
